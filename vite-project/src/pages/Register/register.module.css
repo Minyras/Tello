@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap");
+
+.register {
+  padding: 72px 30px 88px;
+}
+.register .rightPart {
+  display: none;
+}
+
+.register .leftpart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.register .leftpart h2 {
+  font-size: 20px;
+  color: var(--gray-2, #4f4f4f);
+  font-weight: 500;
+  line-height: 28px;
+  margin-bottom: 8px;
+}
+.register .leftpart form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  max-width: 400px;
+}
+.register .leftpart form .formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+.register .leftpart form .formGroup.phoneGroup {
+  position: relative;
+}
+.register .leftpart form .formGroup.phoneGroup select {
+  position: absolute;
+  bottom: 12.5px;
+  left: 16px;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.register .leftpart form .formGroup.phoneGroup input {
+  padding-left: 70px;
+}
+.register .leftpart form label {
+  font-size: 14px;
+  color: var(--gray-2, #4f4f4f);
+  line-height: 20px;
+}
+.register .leftpart .formGroup input {
+  outline: none;
+  border-radius: 8px;
+  background: var(--gray-6, #f2f2f2);
+  border: none;
+  padding: 14px 16px;
+}
+.register .leftpart .formGroup input::placeholder {
+  color: var(--gray-3, #828282);
+}
+.errorMessage {
+  color: #bf1650;
+}
+.errorMessage::before {
+  display: inline;
+  content: "⚠ ";
+}
+.register .leftpart form input[type="submit"] {
+  cursor: pointer;
+  background: var(--main-default, #2dd06e);
+  border-radius: 8px;
+  border: none;
+  padding: 16px 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #fff;
+  width: 100%;
+  margin-top: 24px;
+}
+.register .linkTo {
+  color: var(--gray-2, #4f4f4f);
+  font-size: 14px;
+  line-height: 20px;
+}
+.register .leftpart .linkTo a {
+  color: var(--text-color-accent-link, #36f);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+/* The container */
+.container {
+  display: block;
+  height: 20px;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border: 1px solid var(--gray-5);
+  border-radius: 8px;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: var(--main-default);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 6px;
+  top: 4px;
+  width: 4px;
+  height: 6px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+@media screen and (min-width: 768px) {
+  .register {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 96px 10% 178px;
+    gap: 50px;
+  }
+  .register .rightPart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+  }
+  .register .rightPart img {
+    width: 100%;
+    max-width: 450px;
+  }
+  .register .leftpart .linkTo {
+    display: none;
+  }
+  .register .rightPart .linkTo a {
+    color: var(--blue-link, #2d9cdb);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+.loginButtons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+.loginButtons button {
+  display: flex;
+  border: none;
+  background-color: transparent;
+  color: var(--gray-2, #4f4f4f);
+  font-size: 12px;
+  line-height: 16px;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+}
+.loginButtons img {
+  padding: 6px;
+  border-radius: 20px;
+}
+.loginButtons img.facebook {
+  background: #4267b2;
+}
+.loginButtons img.google {
+  background: #db4437;
+}
+.or {
+  font-family: "DM Sans", sans-serif;
+  color: var(--gray-4, #bdbdbd);
+  font-size: 14px;
+  font-weight: 500;
+}

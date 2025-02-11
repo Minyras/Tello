@@ -1,0 +1,229 @@
+.hamburger {
+  background-color: transparent;
+  border: none;
+  margin-right: 20px;
+}
+.menu {
+  transition: all 0.3s;
+  position: fixed;
+  z-index: 999;
+  top: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  overflow: scroll;
+}
+.menu.openMenu {
+  top: 0;
+}
+.menu .phoneMenuHeader {
+  transition: all 0.3s;
+  position: fixed;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 18px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(48, 48, 48, 0.16);
+  background-color: white;
+}
+.menu.openMenu .phoneMenuHeader {
+  top: 0;
+}
+.menu .phoneMenuHeader .left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.menu .phoneMenuHeader .close {
+  border: none;
+  background-color: transparent;
+}
+.menu .topHeader {
+  font-family: "Whyte Inktrap";
+  font-size: 30px;
+  height: 24px;
+  font-weight: 500;
+  color: #303030;
+}
+.menu .topHeader span {
+  font-family: "Whyte Inktrap";
+  color: var(--main-default);
+}
+.menu .phoneSearch {
+  border: none;
+  background-color: transparent;
+}
+.menu .dropdownMenu {
+  transition: all 0.3s;
+  max-height: 0;
+  overflow: auto;
+  padding-left: 20px;
+  font-size: 16px;
+}
+.menu .dropdownMenu.open {
+  max-height: 1000px;
+}
+.menu nav {
+  padding: 16px 24px 16px 16px;
+  margin-top: 64px;
+  margin-bottom: 80px;
+}
+.menu > nav > ul {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #303030;
+  line-height: 28px;
+}
+.menu .dropdown {
+  position: relative;
+}
+.menu .dropdown::after {
+  content: "";
+  transition: all 0.3s;
+  position: absolute;
+  right: 0;
+  top: 7px;
+  display: inline-block;
+  width: 7px;
+  height: 10px;
+  background-image: url(/next.svg);
+  background-repeat: no-repeat;
+}
+.menu .dropdown .dropdownMenu > div:nth-child(2) {
+  display: none;
+}
+.menu .dropdown.openDropdown::after {
+  rotate: 90deg;
+}
+.menu .phoneMenuFooter {
+  transition: all 0.3s;
+  position: fixed;
+  bottom: -1000px;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  background-color: var(--menuBackground);
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+.menu.openMenu .phoneMenuFooter {
+  bottom: 0;
+}
+.menu .phoneMenuFooter a {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 16px 0;
+  width: 100%;
+  border-radius: 8px;
+  text-align: center;
+}
+.menu .phoneMenuFooter .signIn {
+  border: 1px solid var(--main-default);
+  color: var(--main-default);
+}
+.menu .phoneMenuFooter .signUp {
+  color: white;
+  background-color: var(--main-default);
+}
+@media screen and (min-width: 768px) {
+  .hamburger,
+  .menu.openMenu .phoneMenuFooter,
+  .menu.openMenu .phoneMenuHeader {
+    display: none;
+  }
+  .menu .dropdown::after {
+    display: none;
+  }
+  .menu {
+    order: 4;
+    width: 100%;
+    position: unset;
+    overflow: unset;
+  }
+  .menu > nav {
+    margin: 0;
+    padding: 8px 0 0;
+  }
+  .menu > nav > ul {
+    flex-direction: row;
+    gap: 30px;
+    font-size: 14px;
+    color: var(--gray-2);
+  }
+  .menu .dropdownMenu.open {
+    max-height: unset;
+  }
+  .menu > nav > ul > li {
+    padding: 12px 0;
+  }
+  .menu .dropdown {
+    position: unset;
+  }
+
+  .menu .dropdownMenu {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    top: 133.5px;
+    padding: 40px 5% 106px;
+    display: none;
+    max-height: 1000px;
+    gap: 100px;
+  }
+  .menu .dropdownMenu .leftPart {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+  }
+  .menu .dropdown:hover .dropdownMenu {
+    animation: dropdownMenuDesktop 0.5s ease;
+    display: flex;
+  }
+  @keyframes dropdownMenuDesktop {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .menu .dropdownMenu ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    width: 100%;
+  }
+  .menu .dropdownMenu ul li * {
+    color: var(--gray-2);
+    max-width: 180px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .menu .dropdownMenu ul li h3 {
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menu .dropdownMenu .leftPart {
+    width: 47%;
+  }
+  .menu .dropdown .dropdownMenu > div:nth-child(2) {
+    display: flex;
+  }
+  .menu > nav > ul {
+    gap: 56px;
+  }
+}

@@ -1,0 +1,108 @@
+.advertisement {
+  background-color: #f6f5f8;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  font-size: 4.5vw;
+}
+.advertisement .left {
+  padding: 2em 0.6em;
+  color: #303030;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6em;
+}
+.advertisement .left .name img {
+  height: 0.9em;
+}
+.advertisement .left .name {
+  font-weight: 500;
+  font-size: 0.85em;
+}
+.advertisement .left > h2 {
+  font-size: 1em;
+  line-height: 1.1;
+}
+.advertisement .left .price {
+  font-size: 0.8em;
+}
+.advertisement .left .price .priceIn {
+  font-size: 1.4em;
+}
+.advertisement .left .price .azn {
+  font-size: 0.8em;
+}
+.advertisement .left .buyButton {
+  font-size: 0.5em;
+  border: 1px solid #858585;
+  color: #858585;
+  border-radius: 30px;
+  padding: 0.5em 2em;
+  display: inline-block;
+  line-height: 1em;
+}
+.advertisement .right {
+  padding: 5px 10px;
+  border-radius: 8px;
+  width: 50%;
+  height: 100%;
+  object-fit: contain;
+}
+.whiteAd {
+  background-color: white;
+}
+.whiteAd .left {
+  text-align: left;
+  align-items: flex-start;
+}
+.whiteAd .left .price {
+  font-weight: 500;
+}
+.whiteAd .left .price .credit {
+  color: #858585;
+  margin-top: 3px;
+  font-weight: normal;
+  font-size: 1em;
+  display: inline-block;
+}
+@media screen and (min-width: 576px) {
+  .advertisement {
+    font-size: 1.5rem;
+  }
+  .advertisement .right {
+    padding: 10px 20px;
+  }
+  .advertisement .left {
+    padding: 1.5em 1.3em;
+  }
+  .advertisement .left .name img {
+    height: 0.8em;
+  }
+  .advertisement .left > h2 {
+    font-size: 0.9em;
+  }
+  .advertisement .left .price {
+    font-size: 0.6em;
+  }
+  .advertisement .left .buyButton {
+    font-size: 12px;
+    padding: 6px 20px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .advertisement {
+    max-width: unset;
+    flex: 1 1 0;
+    font-size: 2vw;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .advertisement {
+    display: inline-flex;
+  }
+}

@@ -1,0 +1,180 @@
+:root {
+  --main-default: #2dd06e;
+  --main-black-300: #bbbbbb;
+  --gray-1: #333333;
+  --gray-2: #4f4f4f;
+  --gray-3: #828282;
+  --gray-4: #bdbdbd;
+  --gray-5: #e0e0e0;
+  --gray-6: #f2f2f2;
+  --transparent-success-16: rgba(0, 214, 143, 0.16);
+  --success-400: #2ce69b;
+  --basic-200: #f7f9fc;
+  --basic-300: #edf1f7;
+  --basic-400: #e4e9f2;
+  --basic-600: #8f9bb3;
+  --basic-700: #2e3a59;
+  --danger-600: #db2c66;
+  --blue-link: #2d9cdb;
+  --menuBackground: #faf9f9;
+  --text-color-accent-link: #36f;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+button {
+  outline: none;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+* {
+  font-family: "Euclid Circular A", Calibri, Tahoma, sans-serif;
+  box-sizing: border-box;
+}
+.brands .slick-dots {
+  margin: 0 -5%;
+  bottom: 48px;
+}
+
+.my-profile {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 16px 88px;
+  background: #faf9f9;
+  gap: 16px;
+}
+@media screen and (min-width: 768px) {
+  .my-profile {
+    flex-direction: row;
+    padding: 40px 5% 170px;
+    gap: 32px;
+  }
+}

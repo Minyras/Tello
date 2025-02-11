@@ -1,0 +1,30 @@
+.adsContainer {
+  margin: 48px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+.categories {
+  margin: 48px 16px;
+  display: grid;
+  grid-template-rows: 2fr 1fr 1fr;
+  gap: 16px;
+}
+@media screen and (min-width: 576px) {
+  .categories {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 992px) {
+  .categories {
+    margin: 48px 5%;
+    gap: 32px;
+  }
+  .adsContainer {
+    flex-direction: row;
+    margin: 48px 5%;
+    gap: 32px;
+  }
+}

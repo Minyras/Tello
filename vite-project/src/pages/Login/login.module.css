@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap");
+
+.login {
+  padding: 72px 30px 88px;
+}
+.login .rightPart {
+  display: none;
+}
+
+.login .leftpart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.login .leftpart h2 {
+  font-size: 20px;
+  color: var(--gray-2, #4f4f4f);
+  font-weight: 500;
+  line-height: 28px;
+  margin-bottom: 8px;
+}
+.login .leftpart form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  width: 100%;
+  max-width: 400px;
+}
+.login .leftpart form .formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+.login .leftpart form label {
+  font-size: 14px;
+  color: var(--gray-2, #4f4f4f);
+  line-height: 20px;
+}
+.login .leftpart form input[type="email"] {
+  outline: none;
+  border-radius: 8px;
+  background: var(--gray-6, #f2f2f2);
+  border: none;
+  padding: 14px 16px;
+}
+.login .leftpart form input[type="email"]::placeholder {
+  color: var(--gray-3, #828282);
+}
+.errorMessage {
+  color: #bf1650;
+}
+.errorMessage::before {
+  display: inline;
+  content: "⚠ ";
+}
+.login .leftpart form input[type="submit"] {
+  cursor: pointer;
+  background: var(--main-default, #2dd06e);
+  border-radius: 8px;
+  border: none;
+  padding: 16px 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #fff;
+  width: 100%;
+}
+.login .linkTo {
+  color: var(--gray-2, #4f4f4f);
+  font-size: 14px;
+  line-height: 20px;
+}
+.login .leftpart .linkTo a {
+  color: var(--text-color-accent-link, #36f);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .login {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 96px 10% 178px;
+    gap: 50px;
+  }
+  .login .rightPart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+  }
+  .login .rightPart img {
+    width: 100%;
+    max-width: 450px;
+  }
+  .login .leftpart .linkTo {
+    display: none;
+  }
+  .login .rightPart .linkTo a {
+    color: var(--blue-link, #2d9cdb);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+.loginButtons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+.loginButtons button {
+  display: flex;
+  border: none;
+  background-color: transparent;
+  color: var(--gray-2, #4f4f4f);
+  font-size: 12px;
+  line-height: 16px;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+}
+.loginButtons img {
+  padding: 6px;
+  border-radius: 20px;
+}
+.loginButtons img.facebook {
+  background: #4267b2;
+}
+.loginButtons img.google {
+  background: #db4437;
+}
+.or {
+  font-family: "DM Sans", sans-serif;
+  color: var(--gray-4, #bdbdbd);
+  font-size: 14px;
+  font-weight: 500;
+}

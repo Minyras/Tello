@@ -1,0 +1,36 @@
+.searchCard {
+  display: flex;
+  gap: 16px;
+}
+.searchCard > img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  border: 1px solid var(--basic-300);
+  background: var(--basic-200);
+  border-radius: 4px;
+}
+.searchCard .right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: var(--gray-1);
+}
+.searchCard .right h5 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.searchCard .right p {
+  font-weight: 500;
+  line-height: 24px;
+}
+.searchCard .right p img {
+  margin-left: 6px;
+}
+@media screen and (min-width: 768px) {
+  .searchCard .right h5 {
+    font-size: 16px;
+  }
+}

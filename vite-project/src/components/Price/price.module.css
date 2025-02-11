@@ -1,0 +1,35 @@
+.priceContainer {
+  padding: 32px 24px;
+  border-radius: 16px;
+  background: #fff;
+  height: fit-content;
+}
+.priceContainer h2 {
+  color: #1d2123;
+}
+.priceContainer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.priceContainer ul li {
+  display: flex;
+  justify-content: space-between;
+  line-height: 24px;
+}
+.priceContainer ul li img {
+  margin-left: 8px;
+}
+.priceContainer ul li.divider {
+  height: 1px;
+  background: var(--gray-3, #828282);
+}
+.priceContainer ul li:last-child .price {
+  color: var(--danger-600, #db2c66);
+}
+
+@media screen and (min-width: 768px) {
+  .priceContainer {
+    grid-column: 2/-1;
+  }
+}

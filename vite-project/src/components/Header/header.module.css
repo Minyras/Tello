@@ -1,0 +1,53 @@
+header {
+  padding: 8px 16px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border-bottom: 1px solid var(--success-400);
+}
+header .logo {
+  height: 50px;
+}
+header .buttons {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+  height: 14px;
+}
+header .buttons a img {
+  height: 100%;
+}
+header .buttons .cart {
+  position: relative;
+}
+header .buttons .cart span {
+  position: absolute;
+  top: -8px;
+  right: -6px;
+  font-size: 8px;
+  color: white;
+  background-color: var(--main-default);
+  padding: 3px 5px;
+  border-radius: 50%;
+}
+@media screen and (min-width: 768px) {
+  header {
+    justify-content: space-between;
+    padding: 20px 5% 0;
+  }
+  header .buttons {
+    margin-left: unset;
+    order: 3;
+    gap: 24px;
+    height: 16px;
+  }
+  header .buttons .cart {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  header .buttons .cart span {
+    position: unset;
+    font-size: 12px;
+  }
+}

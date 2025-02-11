@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap");
+
+.profile {
+  width: 100%;
+  max-width: 720px;
+}
+.profile h2 {
+  font-size: 16px;
+  color: var(--gray-2, #4f4f4f);
+  font-weight: 500;
+  line-height: 24px;
+  margin-bottom: 32px;
+}
+.profile form {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 8px;
+  padding: 32px 24px;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+}
+.profile form .formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+.profile form .formGroup.phoneGroup {
+  position: relative;
+}
+.profile form .formGroup.phoneGroup select {
+  position: absolute;
+  bottom: 12.5px;
+  left: 16px;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.profile form .formGroup.phoneGroup input {
+  padding-left: 70px;
+}
+.profile form label {
+  font-size: 14px;
+  color: var(--gray-2, #4f4f4f);
+  line-height: 20px;
+}
+.profile .formGroup input {
+  outline: none;
+  border-radius: 8px;
+  background: var(--gray-6, #f2f2f2);
+  border: none;
+  padding: 14px 16px;
+}
+.profile .formGroup input::placeholder {
+  color: var(--gray-3, #828282);
+}
+.profile .formGroup span {
+  max-height: 0px;
+}
+form > span {
+  display: none;
+}
+.errorMessage {
+  display: inline-block;
+  max-height: 30px;
+  color: #bf1650;
+}
+.errorMessage::before {
+  display: inline;
+  content: "⚠ ";
+}
+.profile form button {
+  cursor: pointer;
+  background: var(--main-default, #2dd06e);
+  border-radius: 8px;
+  border: none;
+  padding: 14px 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #fff;
+  width: 100%;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+@media screen and (min-width: 576px) {
+  .profile form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .profile form button {
+    grid-column: 1/-1;
+    padding: 14px 80px;
+    width: max-content;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 576px) {
+  .profile h2 {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 16px;
+  }
+  .profile form {
+    padding: 32px;
+  }
+}

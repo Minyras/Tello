@@ -1,0 +1,45 @@
+.features {
+  margin: 48px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 48px;
+}
+.features .feature {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  color: var(--gray-1);
+}
+.features .feature h3 {
+  margin-top: 8px;
+  font-weight: 500;
+}
+.features .feature p {
+  font-size: 15px;
+  line-height: 25px;
+}
+@media screen and (min-width: 768px) {
+  .features {
+    margin: 48px 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    gap: 48px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .features {
+    margin: 130px 5%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features {
+    gap: 90px;
+  }
+}

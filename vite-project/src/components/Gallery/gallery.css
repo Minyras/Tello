@@ -1,0 +1,62 @@
+@import "react-image-gallery/styles/css/image-gallery.css";
+
+.image-gallery-content .image-gallery-slide .image-gallery-image {
+  height: 215px;
+}
+.image-gallery-thumbnail {
+  border: none !important;
+  margin-right: 10px;
+  margin-left: 0 !important;
+  /* height: 50px; */
+}
+.image-gallery-thumbnail.active {
+  border: none !important;
+}
+.image-gallery-thumbnail:hover {
+  border: none !important;
+}
+.image-gallery-thumbnail .image-gallery-thumbnail-image {
+  width: 100% !important;
+  object-fit: contain;
+}
+.image-gallery-thumbnail-inner,
+.image-gallery-thumbnail-image {
+  height: 50px;
+}
+.image-gallery-svg {
+  width: 20px !important;
+  height: 40px !important;
+  color: var(--gray-1);
+}
+.image-gallery-icon {
+  filter: none;
+}
+.image-gallery-thumbnails-container {
+  margin-top: 2.5rem;
+}
+@media screen and (min-width: 768px) {
+  .image-gallery-content .image-gallery-slide .image-gallery-image {
+    height: 288px;
+  }
+  .image-gallery-thumbnail-inner,
+  .image-gallery-thumbnail-image {
+    height: 66px !important;
+  }
+  .image-gallery-svg {
+    width: 20px !important;
+    height: 40px !important;
+  }
+}
+@media screen and (min-width: 992px) {
+  .image-gallery-content .image-gallery-slide .image-gallery-image {
+    height: 388px;
+  }
+  .image-gallery-thumbnail-inner,
+  .image-gallery-thumbnail-image {
+    height: 86px !important;
+  }
+  .image-gallery-svg {
+    width: 30px !important;
+    height: 60px !important;
+  }
+}

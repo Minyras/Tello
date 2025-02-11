@@ -1,0 +1,72 @@
+.card {
+  min-width: 191px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 16px 22px;
+  box-shadow: 0px 4px 8px rgba(164, 164, 164, 0.16);
+  border-radius: 4px;
+  text-align: center;
+  background-color: white;
+}
+
+.card > img {
+  width: 70%;
+  object-fit: contain;
+  margin: auto;
+  aspect-ratio: 3/4;
+}
+.card h5 {
+  font-weight: 400;
+  margin: 16px 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--gray-1);
+  text-align: left;
+}
+.card .price {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.card .price .oldPrice {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-3);
+  position: relative;
+  display: flex;
+  gap: 6px;
+}
+.card .price .oldPrice::after {
+  content: "";
+  position: absolute;
+  width: 105%;
+  height: 1px;
+  background-color: var(--gray-3);
+  top: 7px;
+  left: 0;
+}
+.card .price .newPrice {
+  font-weight: 500;
+  line-height: 24px;
+  color: var(--danger-600);
+  display: flex;
+  gap: 6px;
+}
+.card .price .onePrice {
+  font-weight: 500;
+  line-height: 24px;
+  color: var(--gray-1);
+  display: flex;
+  gap: 10px;
+}
+@media screen and (min-width: 992px) {
+  .card {
+    padding: 40px 24px 24px;
+  }
+  .card h5 {
+    margin: 24px 0 16px;
+  }
+  .card .price {
+    margin-top: auto;
+  }
+}

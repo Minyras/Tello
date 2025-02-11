@@ -1,0 +1,74 @@
+.searchList {
+  transition: all 0.3s;
+  position: absolute;
+  margin-top: 17px;
+  margin-left: -16px;
+  width: 100%;
+  background-color: white;
+  overflow: hidden;
+  max-height: 0;
+  box-sizing: content-box;
+  z-index: 2;
+}
+.searchList.searching {
+  max-height: 500px;
+  overflow: unset;
+  padding: 16px 16px 40px;
+}
+.searchList .searches .topPart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.searchList .searches .topPart h3 {
+  font-weight: 500;
+}
+.searchList .searches .topPart button {
+  border: none;
+  background-color: transparent;
+  color: var(--basic-600);
+  font-size: 12px;
+}
+.searchList .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 16px 0 24px;
+}
+.searchList .buttons a {
+  background-color: var(--basic-300);
+  color: var(--basic-700);
+  border-radius: 4px;
+  padding: 4px 6px;
+  font-size: 14px;
+}
+.searchList .result {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.searchList > a {
+  position: absolute;
+  bottom: -40px;
+  display: inline-block;
+  left: 0;
+  right: 0;
+  line-height: 40px;
+  text-align: center;
+  background-color: var(--main-default);
+  color: white;
+  font-size: 14px;
+}
+@media screen and (min-width: 768px) {
+  .searchList {
+    margin-left: 0;
+    margin-top: 0;
+    z-index: 999;
+    box-sizing: border-box;
+  }
+  .searchList > a {
+    border-radius: 0 0 8px 8px;
+  }
+}

@@ -1,0 +1,33 @@
+.confirmation {
+  padding: 150px 16px 210px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+}
+.confirmation img {
+  width: 50%;
+  max-width: 250px;
+}
+.confirmation p {
+  color: var(--gray-2, #4f4f4f);
+  text-align: center;
+  font-weight: 500;
+  line-height: 24px;
+}
+@media screen and (min-width: 768px) {
+  .confirmation {
+    padding: 87px 0 170px;
+    gap: 48px;
+  }
+  .confirmation p {
+    font-size: 24px;
+    line-height: 32px;
+    width: 385px;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}

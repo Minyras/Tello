@@ -1,0 +1,281 @@
+.menu {
+  transition: all 0.3s;
+  position: fixed;
+  z-index: 999;
+  top: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  overflow: scroll;
+}
+.menu.openMenu {
+  top: 0;
+}
+.menu .phoneMenuHeader {
+  transition: all 0.3s;
+  position: fixed;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 18px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(48, 48, 48, 0.16);
+  background-color: white;
+}
+.menu.openMenu .phoneMenuHeader {
+  top: 0;
+}
+.menu .phoneMenuHeader .left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.menu .phoneMenuHeader .close {
+  height: 16px;
+  border: none;
+  background-color: transparent;
+}
+.menu .topHeader {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+  color: var(--gray-1);
+}
+.menu .phoneMenuFooter {
+  transition: all 0.3s;
+  position: fixed;
+  bottom: -1000px;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+.menu.openMenu .phoneMenuFooter {
+  bottom: 0;
+}
+.menu .phoneMenuFooter button {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 16px 0;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+  background-color: var(--main-default);
+}
+
+.menu .filters {
+  padding: 16px 24px 16px 16px;
+  margin-top: 64px;
+  margin-bottom: 80px;
+}
+
+.plusminus {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+.plusminus.active:before {
+  transform: translatey(-50%) rotate(-90deg);
+  opacity: 0;
+}
+.plusminus.active:after {
+  transform: translatey(-50%) rotate(0);
+}
+
+.plusminus:before,
+.plusminus:after {
+  content: "";
+  display: block;
+  background-color: #333;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transition: 0.35s;
+  width: 100%;
+  height: 3px;
+  border-radius: 10px;
+}
+
+.plusminus:before {
+  transform: translatey(-50%);
+}
+
+.plusminus:after {
+  transform: translatey(-50%) rotate(90deg);
+}
+
+.filterBy .headerFilter {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--gray-4);
+}
+.filterBy .headerFilter h5 {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--gray-2);
+}
+.filterBy .headerFilter h5 .count {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--main-black-300);
+}
+
+.buttons {
+  padding: 32px 16px;
+  flex-direction: column;
+  gap: 16px;
+  display: none;
+}
+.buttons.openContainer {
+  animation: container-animation 0.5s ease;
+  display: flex;
+}
+@keyframes container-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* The container */
+.container {
+  display: block;
+  height: 20px;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: var(--transparent-success-16);
+  border: 1px solid var(--main-default);
+  border-radius: 3px;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: var(--main-default);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 6px;
+  top: 4px;
+  width: 4px;
+  height: 6px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.priceInputs {
+  padding: 24px 0;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  display: none;
+  border-bottom: 1px solid var(--gray-4);
+}
+.priceInputs .moneyInput {
+  width: 100px;
+  position: relative;
+}
+.priceInputs .moneyInput input {
+  width: 100%;
+  padding: 10px 36px 10px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--gray-5);
+  outline: none;
+}
+.priceInputs .moneyInput img {
+  position: absolute;
+  top: 13px;
+  right: 15px;
+  width: 14px;
+}
+.priceInputs .inputDivider {
+  width: 24px;
+  height: 1px;
+  background-color: var(--gray-5);
+}
+.priceInputs.openContainer {
+  animation: container-animation 0.5s ease;
+  display: flex;
+}
+@media screen and (min-width: 768px) {
+  .menu.openMenu .phoneMenuFooter,
+  .menu.openMenu .phoneMenuHeader {
+    display: none;
+  }
+  .menu {
+    width: 100%;
+    position: unset;
+    overflow: unset;
+    position: relative;
+    top: 0;
+    margin-top: 40px;
+    z-index: 1;
+  }
+  .menu .filters {
+    padding: 0;
+    margin-top: 0;
+  }
+  .filter {
+    order: -1;
+  }
+}
